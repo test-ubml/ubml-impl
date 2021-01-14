@@ -2,7 +2,7 @@
 
 # UBML: Unified Business Modeling Language(统一业务建模语言)
 
-[![license](https://img.shields.io/github/license/seata/seata.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Build Status](https://travis-ci.com/test-ubml/ubml-impl.svg?branch=master)](https://travis-ci.com/test-ubml/ubml-impl)[![license](https://img.shields.io/github/license/seata/seata.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 
 ## 简介
