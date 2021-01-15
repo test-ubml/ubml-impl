@@ -16,110 +16,6 @@
             <artifactId>ubml-common</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- 元模型公共组件Common-->
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-common-definition</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-common-runtime-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-common-runtime-spi</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-common-runtime-repo</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-common-runtime-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-common-engine</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-common-generator</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!-- 元模型框架Framework-->
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-framework-devtime-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-framework-devtime-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-framework-runtime-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-framework-runtime-spi</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-framework-runtime-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!-- 外部服务ExternalAPI-->
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-definition</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-devtime-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-devtime-spi</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-devtime-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-runtime-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-runtime-spi</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-runtime-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.openatom.ubml</groupId>
-            <artifactId>ubml-model-externalapi-extension</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--3rd-->
         <dependency>
             <groupId>commons-lang</groupId>
@@ -163,27 +59,6 @@
                             <artifactSet>
                                 <includes>
                                     <include>org.openatom.ubml:ubml-common</include>
-                                    <include>org.openatom.ubml:ubml-meta-metamodel-api</include>
-                                    <include>org.openatom.ubml:ubml-meta-metamodel-core</include>
-                                    <include>org.openatom.ubml:ubml-meta-metamodel-spi</include>
-                                    <include>org.openatom.ubml:ubml-model-common-definition</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-definition</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-dev-api</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-devtime-api</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-devtime-core</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-devtime-spi</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-runtime-api</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-runtime-core</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-runtime-spi</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-generator</include>
-                                    <include>org.openatom.ubml:ubml-model-externalapi-extension</include>
-                                    <include>org.openatom.ubml:ubml-model-framework-common</include>
-                                    <include>org.openatom.ubml:ubml-model-framework-dev-api</include>
-                                    <include>org.openatom.ubml:ubml-model-framework-dev-core</include>
-                                    <include>org.openatom.ubml:ubml-model-framework-dev-spi</include>
-                                    <include>org.openatom.ubml:ubml-model-framework-runtime-api</include>
-                                    <include>org.openatom.ubml:ubml-model-framework-runtime-core</include>
-                                    <include>org.openatom.ubml:ubml-model-framework-runtime-spi</include>
                                 </includes>
                             </artifactSet>
                             <transformers>

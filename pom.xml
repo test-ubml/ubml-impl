@@ -27,7 +27,6 @@
         <module>all</module>
         <module>bom</module>
         <module>common</module>
-        <module>model</module>
     </modules>
 
     <groupId>org.openatom.ubml</groupId>
