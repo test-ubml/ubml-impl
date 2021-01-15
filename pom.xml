@@ -154,14 +154,21 @@
 
     <build>
         <plugins>
+
             <plugin>
-                <groupId>org.openclover</groupId>
-                <artifactId>clover-maven-plugin</artifactId>
-                <version>4.3.1</version>
-                <configuration>
-                    <includesTestSourceRoots>false</includesTestSourceRoots>
-                </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven-source-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -184,27 +191,12 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
     <profiles>
         <profile>
             <id>release</id>
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>ubml-oss-snapshots</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
-                <repository>
-                    <id>ubml-oss-releases</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
-            <activation>
-                <!-- default active -->
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <build>
                 <plugins>
                     <!-- Javadoc -->
@@ -225,22 +217,7 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- packaging source code -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${maven-source-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <!--staging puglin,用于自动执行发布阶段(免手动)-->
+                    <!--GPG-->
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -249,10 +226,10 @@
                         <configuration>
                             <serverId>ubml-oss-releases</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                            <!-- 用于自动执行发布阶段(免手动)-->
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
                     </plugin>
-
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
@@ -264,6 +241,9 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <configuration>
+                                    <keyname>D34D1DD9310C0D7E0B38A9E91F12BF83187C4381</keyname>
+                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
@@ -281,6 +261,20 @@
                 <image.tags>${project.version},latest</image.tags>
                 <profiles.active>release</profiles.active>
             </properties>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>ubml-oss-snapshots</id>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>ubml-oss-releases</id>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+            <activation>
+                <!-- default active -->
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
 
     </profiles>
